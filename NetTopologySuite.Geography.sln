@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetTopologySuite.Geography", "NetTopologySuite.Geography\NetTopologySuite.Geography.csproj", "{9D7683AA-9B62-49F2-A823-0C018FB5D6DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetTopologySuite.Geography.Tests", "NetTopologySuite.Geography.Tests\NetTopologySuite.Geography.Tests.csproj", "{4A6B45D7-CDC5-4855-8115-E8AB2837A886}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{570ACE45-FB26-4FB6-AC18-0280A12863E1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.travis.yml = .travis.yml
+		nts.snk = nts.snk
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D7683AA-9B62-49F2-A823-0C018FB5D6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D7683AA-9B62-49F2-A823-0C018FB5D6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D7683AA-9B62-49F2-A823-0C018FB5D6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D7683AA-9B62-49F2-A823-0C018FB5D6DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A6B45D7-CDC5-4855-8115-E8AB2837A886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A6B45D7-CDC5-4855-8115-E8AB2837A886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A6B45D7-CDC5-4855-8115-E8AB2837A886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A6B45D7-CDC5-4855-8115-E8AB2837A886}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B68E5A9-2D71-464A-88A5-0E1943A0DC9F}
+	EndGlobalSection
+EndGlobal
