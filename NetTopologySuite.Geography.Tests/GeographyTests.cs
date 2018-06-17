@@ -115,7 +115,7 @@ namespace NetTopologySuite
         public void OverlapsShouldUseRelate()
         {
             var other = Mock.Of<Geography>();
-            var sut = Mock.Of<Geography>(x => x.Dimension == Dimension.Point && x.Relate(other) == new IntersectionMatrix("000FFF0F2"));
+            var sut = Mock.Of<Geography>(x => x.Relate(other) == new IntersectionMatrix("000FFF0F2"));
             Mock.Get(sut).CallBase = true;
             Assert.That(sut.Overlaps(other), Is.True);
         }
