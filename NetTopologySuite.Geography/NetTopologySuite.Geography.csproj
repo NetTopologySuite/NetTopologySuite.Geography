@@ -30,6 +30,8 @@
     <PackageReference Include="GeoAPI" Version="1.7.5-pre024" />
 
     <PackageReference Include="System.Memory" Version="4.5.0" />
+
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.2" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
