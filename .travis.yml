@@ -1,5 +1,6 @@
 language: csharp
 mono: none
+sudo: false
 dotnet: 2.1.300
 dist: trusty
 script:
