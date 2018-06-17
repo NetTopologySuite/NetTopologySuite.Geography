@@ -12,8 +12,8 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <TRAVIS_BUILD_NUMBER Condition=" '$(AutoIncrement)' == '' ">99999</TRAVIS_BUILD_NUMBER>
-    <PrereleaseInfo Condition=" '$(TRAVIS_BRANCH)' != 'master' ">-pre$(TRAVIS_BUILD_NUMBER)</PrereleaseInfo>
+    <AutoIncrement Condition=" '$(AutoIncrement)' == '' ">00000</AutoIncrement>
+    <PrereleaseInfo Condition=" '$(TRAVIS_BRANCH)' != 'master' ">-pre$(AutoIncrement)</PrereleaseInfo>
     <Version>0.0.1$(PrereleaseInfo)</Version>
     <Authors>NetTopologySuite - Team</Authors>
     <Company>NetTopologySuite - Team</Company>
