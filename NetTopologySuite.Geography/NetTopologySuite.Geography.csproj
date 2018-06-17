@@ -13,7 +13,7 @@
 
     <VersionSuffix Condition=" '$(VersionSuffix)' == '' ">pre00000</VersionSuffix>
     <Version>0.0.1</Version>
-    <Version Condition=" '$(TRAVIS_BRANCH)' != 'master' ">$(Version)-$(VersionSuffix)</Version>
+    <Version Condition=" '$(TRAVIS_BRANCH)' != 'master' ">$(Version)$(VersionSuffix)</Version>
     <Authors>NetTopologySuite - Team</Authors>
     <Company>NetTopologySuite - Team</Company>
     <PackageProjectUrl>https://github.com/NetTopologySuite/NetTopologySuite.Geography</PackageProjectUrl>
