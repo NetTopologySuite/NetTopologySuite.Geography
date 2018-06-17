@@ -127,7 +127,15 @@ namespace NetTopologySuite
         /// TODO: xmldoc.
         /// </summary>
         // [geography]::STGeomFromText(geography_tagged_text, SRID)
-        public static Geography Parse(ReadOnlySpan<char> wkt, int spatialReferenceIdentifier) => throw new NotImplementedException();
+        [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
+        public static Geography Parse(ReadOnlySpan<char> wkt, int spatialReferenceIdentifier)
+        {
+            int x = 0;
+            x++;
+            int y = x;
+            throw new NotImplementedException();
+            string z = y.ToString();
+        }
 
         /// <summary>
         /// TODO: xmldoc.
