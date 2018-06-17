@@ -2,15 +2,21 @@
 
   <PropertyGroup>
     <SolutionDir Condition=" '$(SolutionDir)' == '' ">$(ProjectDir)..\</SolutionDir>
-    <TargetFramework>netstandard1.0</TargetFramework>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(SolutionDir)nts.snk</AssemblyOriginatorKeyFile>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <RestoreAdditionalProjectSources>$(RestoreAdditionalProjectSources);https://www.myget.org/F/nettopologysuite/api/v3/index.json</RestoreAdditionalProjectSources>
+
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>NetTopologySuite</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Runtime" Version="4.3.0" />
+    <PackageReference Include="GeoAPI" Version="1.7.5-pre024" />
+
+    <PackageReference Include="System.Memory" Version="4.5.0" />
   </ItemGroup>
 
 </Project>
