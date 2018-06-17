@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq.Expressions;
-using System.Text;
+
 using GeoAPI.Geometries;
+
 using Moq;
+
 using NUnit.Framework;
 
 namespace NetTopologySuite
