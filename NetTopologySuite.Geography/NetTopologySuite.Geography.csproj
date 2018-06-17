@@ -11,7 +11,7 @@
     <LangVersion>7.3</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
-    <VersionSuffix Condition=" '$(VersionSuffix)' == '' ">pre00000</VersionSuffix>
+    <VersionSuffix Condition=" '$(VersionSuffix)' == '' ">-pre00000</VersionSuffix>
     <Version>0.0.1</Version>
     <Version Condition=" '$(TRAVIS_BRANCH)' != 'master' ">$(Version)$(VersionSuffix)</Version>
     <Authors>NetTopologySuite - Team</Authors>
