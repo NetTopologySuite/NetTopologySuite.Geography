@@ -10,6 +10,21 @@
     <RootNamespace>NetTopologySuite</RootNamespace>
     <LangVersion>7.3</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <TRAVIS_BUILD_NUMBER Condition=" '$(AutoIncrement)' == '' ">99999</TRAVIS_BUILD_NUMBER>
+    <PrereleaseInfo Condition=" '$(TRAVIS_BRANCH)' != 'master' ">-pre$(TRAVIS_BUILD_NUMBER)</PrereleaseInfo>
+    <Version>0.0.1$(PrereleaseInfo)</Version>
+    <Authors>NetTopologySuite - Team</Authors>
+    <Company>NetTopologySuite - Team</Company>
+    <PackageProjectUrl>https://github.com/NetTopologySuite/NetTopologySuite.Geography</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/NetTopologySuite/NetTopologySuite.Geography/blob/develop/LICENSE.md</PackageLicenseUrl>
+    <PackageTags>NTS Topology OGC SFS</PackageTags>
+    <Product>NTS - Topology Suite</Product>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Description>This package extends the types available in the main NetTopologySuite (NTS) packages to include geographic types as well.</Description>
   </PropertyGroup>
 
   <ItemGroup>

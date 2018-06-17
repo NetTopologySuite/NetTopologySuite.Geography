@@ -1,7 +1,11 @@
-﻿language: csharp
+language: csharp
 mono: none
 dotnet: 2.1.300
 dist: trusty
 script:
-- dotnet build -c Release
+- AutoIncrement=$(printf "%05d" $TRAVIS_BUILD_NUMBER) dotnet build -c Release
 - dotnet test NetTopologySuite.Geography.Tests --no-build --no-restore -c Release
+- dotnet nuget push NetTopologySuite.Geography/bin/Release/*.nupkg -k $MYGET_API_KEY -s https://www.myget.org/F/airbreather/api/v2/package
+env:
+  global:
+    secure: M30Yv8Z8ByUS2CyN3qKVTGxlGVzSg1uxSw30MlkYTHLMAp+LrmDISsR/VzjBAJiDqa7Q8vcTKkGSJYl86FLDzsyORkuqgegQ4w4hNnxA4BEpQVgVnZs7utaa0XlWrOlLC6jKHbHrrRi6QOZQU+GtDVveGZlAdc1zS43MbP1/v3Xp9TKxppKuyllc+Tq+t3uPQvq77ZbrBktNNpVbJ1CTXLFJ5kd4Y+NTTU0frxEBaN2o634MBbm38Hfwd+qB2auE0KQXG15lx+Uizk3bQHAtxuEMUCotGaiVzVC2IMS6S+hX9DHnqlDcmTUPAtcT256a4oSlDWiExab3j7E9C+EfNqtqsVXoByphblI4EMXJdoZMn0asjj9zrrFGpfAQdHkb03W3g5of5IkviD0/98BrEqGPD0N4evNUQgwl3y+Ez1mH5KIjNl2/aJfxUz0IqItfl0ifiG0WsIgiKm0ck2E9xu7R3c41KmIL/am5WYYKYbOKl9Jud8wpXXx4NaLD5Ga9UpdprpCiZwsDtrG+F73IW7vuKLOPs8RLKXCPI2FWEM2MuV93ZkCu8cnC7M+0+JQhLIsO0n7HMcG2yEeauCtqIuVc6ltQnT74YLQQO1bsBhx9trBgBIZcEp32DlupsizrQcyWH8g2juGLGeHSpo9V57AYZyXuK/feGsHSGMOV1eI=
