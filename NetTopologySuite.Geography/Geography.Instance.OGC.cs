@@ -55,6 +55,7 @@ namespace NetTopologySuite
 
         /// <summary>
         /// TODO: xmldoc.
+        /// TODO: nullable?
         /// </summary>
         // STNumCurves()
         public virtual int NumCurves => throw new NotImplementedException();

@@ -2,9 +2,15 @@
 {
     #region Intermediate-Only
 
-    public abstract class GeographyCurve : Geography { }
+    public abstract class GeographyCurve : Geography
+    {
+        public sealed override double Area => 0;
+    }
 
-    public abstract class GeographySurface : Geography { }
+    public abstract class GeographySurface : Geography
+    {
+        public sealed override int NumCurves => 0;
+    }
 
     public abstract class GeographyMultiCurve : GeographyCollection { }
 
@@ -14,9 +20,12 @@
 
     #region Instantiable
 
-    public abstract class FullGlobe : Geography { }
+    public abstract class GeographyPoint : Geography
+    {
+        public sealed override double Area => 0;
 
-    public abstract class GeographyPoint : Geography { }
+        public sealed override int NumCurves => 0;
+    }
 
     public abstract class GeographyLineString : GeographyCurve { }
 
@@ -26,9 +35,15 @@
 
     public abstract class GeographyPolygon : GeographySurface { }
 
+    // TODO: GeographyPolygon or Geography?
+    public abstract class FullGlobe : GeographyPolygon { }
+
     public abstract class GeographyCurvePolygon : GeographySurface { }
 
-    public abstract class GeographyCollection : Geography { }
+    public abstract class GeographyCollection : Geography
+    {
+        public sealed override int NumCurves => 0;
+    }
 
     public abstract class GeographyMultiPoint : GeographyCollection { }
 
